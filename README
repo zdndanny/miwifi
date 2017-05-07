@@ -1,15 +1,27 @@
 
 
-        Xiaomi Router Core Support Package
+
+        Xiaomi Router Board Support Package
+
 
 
 1. Overview
 ============
 
+Chinese version please refer to the README.cn
+
 Support Xiaomi R1D router (with 1T sata disk).
 
 The Kernel version is 2.6.36
 WLAN driver are binary object file from Broadcom located in 'drivers/net/wl'
+
+This BSP is validated in following environment:
+
+ * CFE version: v1.0.4 / Build Date: Wed Apr 30 18:03:21 CST 2014
+
+
+If you meet some kernel loading issue plase degrade the firmware to 0.4.85
+which is with this CFE version.
 
 
 2. Change History
@@ -81,6 +93,13 @@ system is OK.
 The following is validated in Ubuntu 12.04:
 
   $ sudo apt-get install lzma
+
+Please make sure the version of lzma is:
+
+  $ lzma --version
+  LZMA command line tool 9.22
+  LZMA SDK 9.22
+
   $ git clone git://github.com/comcat/miwifi.git
   $ cd miwifi/
   $ make
